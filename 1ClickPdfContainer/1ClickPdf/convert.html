@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>1 Click PDF - Convert To PDF</title>
+    <style>
+        body, html {height: 100%; width: 100%; margin: 0; padding: 0; overflow:hidden;}
+        .content{position:relative; font-size:42px; font-family:Arial, Helvetica, sans-serif; padding-top:10px; padding-bottom:5px;}
+        .content .click{color:#d14b4c; cursor:pointer; border-bottom: 1px dashed #7d7d7d;}
+        .holds-the-iframe {background:url(images/loader.svg) center center no-repeat;}
+        .footer ul{margin:0px; padding:0px; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+        .footer ul li{ list-style-type:none; display:inline-block; margin-right:10px; padding-right:10px; border-right:1px solid #ccc;}
+        .footer ul li a{color:#333;  text-decoration:underline;}
+        .footer ul li a:hover{color:#cf4c4c;}
+        .footer ul li:last-child{ margin-right:0px; padding-right:0px; border:none;}
+    </style>
+    <link rel="stylesheet" href="css/balloon.css">
+</head>
+<body>
+    <div style="width:80%; margin:0px auto; text-align:center; padding:10px; padding-top:30px;">
+        <div><img src="images/logo.png"></div>
+        <div class="content">Convert <span class="click" data-balloon-length="xlarge" data-balloon="Supported formats: 3fr abw ai arw azw azw3 azw4 bmp cbc cbr cbz cdr cgm chm cr2 crw csv dcr djvu dng doc docm docx dps dwg dxf emf eps epub erf et fb2 gif heic htm html htmlz ico jpeg jpg key lit lrf lwp md mobi mos mrw nef numbers odd odp ods odt orf pages pdb pdf pef pml png ppm pps ppsx ppt pptm pptx prc ps psd raf raw rb rst rtf sda sdc sdw sk sk1 snb svg svgz tcr tex tif tiff txt txtz vsd webp website wmf wpd wps x3f xcf xls xlsm xlsx xps zabw" data-balloon-pos="down">almost anything</span> to pdf</div>
+    </div>
+    <div class="holds-the-iframe">
+        <iframe src="http://convert.1clickpdf.com/?insideEnv=true" style="width:100%; height:385px; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>
+    </div>
+    <div class="footer" style="width:80%; margin:0px auto; text-align:center; padding:10px; padding-top:0px;">
+        <ul>
+            Your files will be uploaded to our server for conversion and returned back to you in pdf format.<br>
+            We keep no logs of your activity and all uploaded and converted files are auto deleted hourly.
+        </ul>
+    </div>
+</body>
+</html>

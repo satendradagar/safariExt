@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A4E06EA217B195A002A73A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E06E9217B195A002A73A3 /* AppDelegate.swift */; };
+		9A4E06EC217B195A002A73A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E06EB217B195A002A73A3 /* ViewController.swift */; };
+		9A4E06EE217B195A002A73A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E06ED217B195A002A73A3 /* Assets.xcassets */; };
+		9A4E06F1217B195A002A73A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E06EF217B195A002A73A3 /* Main.storyboard */; };
+		9A4E0700217B1969002A73A3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4E06FF217B1969002A73A3 /* Cocoa.framework */; };
+		9A4E0703217B1969002A73A3 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E0702217B1969002A73A3 /* SafariExtensionHandler.swift */; };
+		9A4E0705217B1969002A73A3 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E0704217B1969002A73A3 /* SafariExtensionViewController.swift */; };
+		9A4E0708217B1969002A73A3 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E0706217B1969002A73A3 /* SafariExtensionViewController.xib */; };
+		9A4E070D217B1969002A73A3 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E070C217B1969002A73A3 /* ToolbarItemIcon.pdf */; };
+		9A4E0711217B1969002A73A3 /* 1ClickPdf.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A4E06FD217B1969002A73A3 /* 1ClickPdf.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9A4E071F217B8C2E002A73A3 /* balloon.css in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E0717217B8C2D002A73A3 /* balloon.css */; };
+		9A4E0720217B8C2E002A73A3 /* convert.html in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E0718217B8C2D002A73A3 /* convert.html */; };
+		9A4E0721217B8C2E002A73A3 /* global.html in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E0719217B8C2D002A73A3 /* global.html */; };
+		9A4E0722217B8C2E002A73A3 /* store.js in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E071B217B8C2E002A73A3 /* store.js */; };
+		9A4E0723217B8C2E002A73A3 /* global.js in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E071C217B8C2E002A73A3 /* global.js */; };
+		9A4E0724217B8C2E002A73A3 /* injected.js in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E071D217B8C2E002A73A3 /* injected.js */; };
+		9A4E0725217B8C2E002A73A3 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E071E217B8C2E002A73A3 /* Settings.plist */; };
+		9ABEDB5C21872F8300DFB1A9 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 9ABEDB5B21872F8300DFB1A9 /* script.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A4E070F217B1969002A73A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A4E06DE217B195A002A73A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A4E06FC217B1969002A73A3;
+			remoteInfo = 1ClickPdf;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9A4E0715217B1969002A73A3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9A4E0711217B1969002A73A3 /* 1ClickPdf.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9A4E06E6217B195A002A73A3 /* 1ClickPdfContainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1ClickPdfContainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4E06E9217B195A002A73A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A4E06EB217B195A002A73A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A4E06ED217B195A002A73A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A4E06F0217B195A002A73A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9A4E06F2217B195A002A73A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A4E06F3217B195A002A73A3 /* _ClickPdfContainer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = _ClickPdfContainer.entitlements; sourceTree = "<group>"; };
+		9A4E06FD217B1969002A73A3 /* 1ClickPdf.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = 1ClickPdf.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4E06FF217B1969002A73A3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		9A4E0702217B1969002A73A3 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		9A4E0704217B1969002A73A3 /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
+		9A4E0707217B1969002A73A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
+		9A4E0709217B1969002A73A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A4E070A217B1969002A73A3 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		9A4E070C217B1969002A73A3 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		9A4E070E217B1969002A73A3 /* _ClickPdf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = _ClickPdf.entitlements; sourceTree = "<group>"; };
+		9A4E0717217B8C2D002A73A3 /* balloon.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = balloon.css; sourceTree = "<group>"; };
+		9A4E0718217B8C2D002A73A3 /* convert.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = convert.html; sourceTree = "<group>"; };
+		9A4E0719217B8C2D002A73A3 /* global.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = global.html; sourceTree = "<group>"; };
+		9A4E071B217B8C2E002A73A3 /* store.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = store.js; sourceTree = "<group>"; };
+		9A4E071C217B8C2E002A73A3 /* global.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = global.js; sourceTree = "<group>"; };
+		9A4E071D217B8C2E002A73A3 /* injected.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = injected.js; sourceTree = "<group>"; };
+		9A4E071E217B8C2E002A73A3 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		9ABEDB5B21872F8300DFB1A9 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A4E06E3217B195A002A73A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4E06FA217B1969002A73A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A4E0700217B1969002A73A3 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A4E06DD217B195A002A73A3 = {
+			isa = PBXGroup;
+			children = (
+				9A4E06E8217B195A002A73A3 /* 1ClickPdfContainer */,
+				9A4E0701217B1969002A73A3 /* 1ClickPdf */,
+				9A4E06FE217B1969002A73A3 /* Frameworks */,
+				9A4E06E7217B195A002A73A3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9A4E06E7217B195A002A73A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A4E06E6217B195A002A73A3 /* 1ClickPdfContainer.app */,
+				9A4E06FD217B1969002A73A3 /* 1ClickPdf.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A4E06E8217B195A002A73A3 /* 1ClickPdfContainer */ = {
+			isa = PBXGroup;
+			children = (
+				9A4E06E9217B195A002A73A3 /* AppDelegate.swift */,
+				9A4E06EB217B195A002A73A3 /* ViewController.swift */,
+				9A4E06ED217B195A002A73A3 /* Assets.xcassets */,
+				9A4E06EF217B195A002A73A3 /* Main.storyboard */,
+				9A4E06F2217B195A002A73A3 /* Info.plist */,
+				9A4E06F3217B195A002A73A3 /* _ClickPdfContainer.entitlements */,
+			);
+			path = 1ClickPdfContainer;
+			sourceTree = "<group>";
+		};
+		9A4E06FE217B1969002A73A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A4E06FF217B1969002A73A3 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A4E0701217B1969002A73A3 /* 1ClickPdf */ = {
+			isa = PBXGroup;
+			children = (
+				9A4E0702217B1969002A73A3 /* SafariExtensionHandler.swift */,
+				9A4E0704217B1969002A73A3 /* SafariExtensionViewController.swift */,
+				9A4E0706217B1969002A73A3 /* SafariExtensionViewController.xib */,
+				9A4E0709217B1969002A73A3 /* Info.plist */,
+				9A4E070A217B1969002A73A3 /* script.js */,
+				9A4E0718217B8C2D002A73A3 /* convert.html */,
+				9A4E0716217B8C2D002A73A3 /* css */,
+				9A4E0719217B8C2D002A73A3 /* global.html */,
+				9A4E071A217B8C2E002A73A3 /* js */,
+				9A4E071E217B8C2E002A73A3 /* Settings.plist */,
+				9A4E070C217B1969002A73A3 /* ToolbarItemIcon.pdf */,
+				9A4E070E217B1969002A73A3 /* _ClickPdf.entitlements */,
+			);
+			path = 1ClickPdf;
+			sourceTree = "<group>";
+		};
+		9A4E0716217B8C2D002A73A3 /* css */ = {
+			isa = PBXGroup;
+			children = (
+				9A4E0717217B8C2D002A73A3 /* balloon.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		9A4E071A217B8C2E002A73A3 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				9ABEDB5B21872F8300DFB1A9 /* script.js */,
+				9A4E071B217B8C2E002A73A3 /* store.js */,
+				9A4E071C217B8C2E002A73A3 /* global.js */,
+				9A4E071D217B8C2E002A73A3 /* injected.js */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A4E06E5217B195A002A73A3 /* 1ClickPdfContainer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A4E06F6217B195A002A73A3 /* Build configuration list for PBXNativeTarget "1ClickPdfContainer" */;
+			buildPhases = (
+				9A4E06E2217B195A002A73A3 /* Sources */,
+				9A4E06E3217B195A002A73A3 /* Frameworks */,
+				9A4E06E4217B195A002A73A3 /* Resources */,
+				9A4E0715217B1969002A73A3 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A4E0710217B1969002A73A3 /* PBXTargetDependency */,
+			);
+			name = 1ClickPdfContainer;
+			productName = 1ClickPdfContainer;
+			productReference = 9A4E06E6217B195A002A73A3 /* 1ClickPdfContainer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A4E06FC217B1969002A73A3 /* 1ClickPdf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A4E0712217B1969002A73A3 /* Build configuration list for PBXNativeTarget "1ClickPdf" */;
+			buildPhases = (
+				9A4E06F9217B1969002A73A3 /* Sources */,
+				9A4E06FA217B1969002A73A3 /* Frameworks */,
+				9A4E06FB217B1969002A73A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 1ClickPdf;
+			productName = 1ClickPdf;
+			productReference = 9A4E06FD217B1969002A73A3 /* 1ClickPdf.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A4E06DE217B195A002A73A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = COREBITS;
+				TargetAttributes = {
+					9A4E06E5217B195A002A73A3 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					9A4E06FC217B1969002A73A3 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 9A4E06E1217B195A002A73A3 /* Build configuration list for PBXProject "1ClickPdfContainer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9A4E06DD217B195A002A73A3;
+			productRefGroup = 9A4E06E7217B195A002A73A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A4E06E5217B195A002A73A3 /* 1ClickPdfContainer */,
+				9A4E06FC217B1969002A73A3 /* 1ClickPdf */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A4E06E4217B195A002A73A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A4E06EE217B195A002A73A3 /* Assets.xcassets in Resources */,
+				9A4E06F1217B195A002A73A3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4E06FB217B1969002A73A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A4E0722217B8C2E002A73A3 /* store.js in Resources */,
+				9A4E0724217B8C2E002A73A3 /* injected.js in Resources */,
+				9ABEDB5C21872F8300DFB1A9 /* script.js in Resources */,
+				9A4E070D217B1969002A73A3 /* ToolbarItemIcon.pdf in Resources */,
+				9A4E071F217B8C2E002A73A3 /* balloon.css in Resources */,
+				9A4E0720217B8C2E002A73A3 /* convert.html in Resources */,
+				9A4E0721217B8C2E002A73A3 /* global.html in Resources */,
+				9A4E0723217B8C2E002A73A3 /* global.js in Resources */,
+				9A4E0708217B1969002A73A3 /* SafariExtensionViewController.xib in Resources */,
+				9A4E0725217B8C2E002A73A3 /* Settings.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A4E06E2217B195A002A73A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A4E06EC217B195A002A73A3 /* ViewController.swift in Sources */,
+				9A4E06EA217B195A002A73A3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4E06F9217B1969002A73A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A4E0705217B1969002A73A3 /* SafariExtensionViewController.swift in Sources */,
+				9A4E0703217B1969002A73A3 /* SafariExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A4E0710217B1969002A73A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A4E06FC217B1969002A73A3 /* 1ClickPdf */;
+			targetProxy = 9A4E070F217B1969002A73A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A4E06EF217B195A002A73A3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A4E06F0217B195A002A73A3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9A4E0706217B1969002A73A3 /* SafariExtensionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A4E0707217B1969002A73A3 /* Base */,
+			);
+			name = SafariExtensionViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A4E06F4217B195A002A73A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9A4E06F5217B195A002A73A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		9A4E06F7217B195A002A73A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = 1ClickPdfContainer/_ClickPdfContainer.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 462M73BZML;
+				INFOPLIST_FILE = 1ClickPdfContainer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.COREBITS.-ClickPdfContainer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		9A4E06F8217B195A002A73A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = 1ClickPdfContainer/_ClickPdfContainer.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 462M73BZML;
+				INFOPLIST_FILE = 1ClickPdfContainer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.COREBITS.-ClickPdfContainer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		9A4E0713217B1969002A73A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = 1ClickPdf/_ClickPdf.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 462M73BZML;
+				INFOPLIST_FILE = 1ClickPdf/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.COREBITS.-ClickPdfContainer.-ClickPdf";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		9A4E0714217B1969002A73A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = 1ClickPdf/_ClickPdf.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 462M73BZML;
+				INFOPLIST_FILE = 1ClickPdf/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.COREBITS.-ClickPdfContainer.-ClickPdf";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A4E06E1217B195A002A73A3 /* Build configuration list for PBXProject "1ClickPdfContainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A4E06F4217B195A002A73A3 /* Debug */,
+				9A4E06F5217B195A002A73A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A4E06F6217B195A002A73A3 /* Build configuration list for PBXNativeTarget "1ClickPdfContainer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A4E06F7217B195A002A73A3 /* Debug */,
+				9A4E06F8217B195A002A73A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A4E0712217B1969002A73A3 /* Build configuration list for PBXNativeTarget "1ClickPdf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A4E0713217B1969002A73A3 /* Debug */,
+				9A4E0714217B1969002A73A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A4E06DE217B195A002A73A3 /* Project object */;
+}
