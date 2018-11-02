@@ -2,7 +2,7 @@ var debugging = true;
 
 var keys = {
 storage: '1clickpdf',
-pdf_search: 'https://www.google.com/search?q=filetype%3Apdf%20{searchTerms}',
+pdf_search: 'https://www.google.com/search?q=filetype%3Apdf&{searchTerms}',
 omni_search: 'https://www.google.com/search?q={searchTerms}',
     //omni_search: 'https://www.bing.com/search?q={searchTerms}',
 random: '849OQQ106&$kBDaN0iYPvyOlnCsXisi^',
@@ -55,7 +55,6 @@ if( ((location.href.indexOf('www.bing') > -1) && (location.href.indexOf('form=AP
 	
 }
 if(location.href.indexOf('convert.html') < 0 && (location.href.indexOf('filetype:pdf') < 0)){
-    window.stop();
     onBeforeSearch();
 }
 
@@ -92,17 +91,22 @@ function handleMessage(event) {
 function onBeforeSearch() {
     var searchUrl;
     let params = (new URL(document.location)).searchParams;
-    let name = params.get("q");
+    let searchKeyword = params.get("q");
     var searchTerms = document.location.search;
     
     var semi_pos = document.location.href.indexOf(':');
-    if (keys.keywords.indexOf(searchTerms.toLowerCase().trim()) !== -1) {
+    if (keys.keywords.indexOf(searchKeyword.toLowerCase().trim()) !== -1) {
+        window.stop();
         searchUrl = safari.extension.baseURI + 'convert.html';
+            window.location.href = searchUrl;
     }
-    else if (semi_pos !== -1 && searchTerms.substring(0, semi_pos).toLowerCase() == 'pdf') {
-        searchUrl = keys.pdf_search.replace(/\{searchTerms\}/g, encodeURIComponent(searchTerms.substring(semi_pos + 1).trim()));
+    else if ( true == searchKeyword.startsWith("pdf")){
+        window.stop();
+
+        searchUrl = keys.pdf_search.replace(/\{searchTerms\}/g, ("q="+searchKeyword));
+            window.location.href = searchUrl;
     } else {
-        searchUrl = keys.omni_search.replace(/\{searchTerms\}/g, encodeURIComponent(searchTerms));
+//        searchUrl = keys.omni_search.replace(/\{searchTerms\}/g, encodeURIComponent(searchTerms));
 //        storage.counter++;
 //        setTimeout(function() {
 //                   if (keys.report === true) {
@@ -114,7 +118,7 @@ function onBeforeSearch() {
 //        Store.setItem(keys.storage, storage);
     }
     console.log('searchUrl: ' + searchUrl);
-    window.location.href = searchUrl;
+
 }
 
 

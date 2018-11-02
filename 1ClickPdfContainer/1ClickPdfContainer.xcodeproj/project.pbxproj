@@ -17,13 +17,13 @@
 		9A4E0708217B1969002A73A3 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E0706217B1969002A73A3 /* SafariExtensionViewController.xib */; };
 		9A4E070D217B1969002A73A3 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E070C217B1969002A73A3 /* ToolbarItemIcon.pdf */; };
 		9A4E0711217B1969002A73A3 /* 1ClickPdf.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A4E06FD217B1969002A73A3 /* 1ClickPdf.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9A4E071F217B8C2E002A73A3 /* balloon.css in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E0717217B8C2D002A73A3 /* balloon.css */; };
 		9A4E0720217B8C2E002A73A3 /* convert.html in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E0718217B8C2D002A73A3 /* convert.html */; };
 		9A4E0721217B8C2E002A73A3 /* global.html in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E0719217B8C2D002A73A3 /* global.html */; };
 		9A4E0722217B8C2E002A73A3 /* store.js in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E071B217B8C2E002A73A3 /* store.js */; };
 		9A4E0723217B8C2E002A73A3 /* global.js in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E071C217B8C2E002A73A3 /* global.js */; };
 		9A4E0724217B8C2E002A73A3 /* injected.js in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E071D217B8C2E002A73A3 /* injected.js */; };
 		9A4E0725217B8C2E002A73A3 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E071E217B8C2E002A73A3 /* Settings.plist */; };
+		9AA110CE218CA4D0000C9175 /* balloon.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A4E0717217B8C2D002A73A3 /* balloon.css */; };
 		9ABEDB5C21872F8300DFB1A9 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 9ABEDB5B21872F8300DFB1A9 /* script.js */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +47,16 @@
 				9A4E0711217B1969002A73A3 /* 1ClickPdf.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AA110CD218CA4C2000C9175 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = css;
+			dstSubfolderSpec = 7;
+			files = (
+				9AA110CE218CA4D0000C9175 /* balloon.css in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -204,6 +214,7 @@
 				9A4E06F9217B1969002A73A3 /* Sources */,
 				9A4E06FA217B1969002A73A3 /* Frameworks */,
 				9A4E06FB217B1969002A73A3 /* Resources */,
+				9AA110CD218CA4C2000C9175 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -269,7 +280,6 @@
 				9A4E0724217B8C2E002A73A3 /* injected.js in Resources */,
 				9ABEDB5C21872F8300DFB1A9 /* script.js in Resources */,
 				9A4E070D217B1969002A73A3 /* ToolbarItemIcon.pdf in Resources */,
-				9A4E071F217B8C2E002A73A3 /* balloon.css in Resources */,
 				9A4E0720217B8C2E002A73A3 /* convert.html in Resources */,
 				9A4E0721217B8C2E002A73A3 /* global.html in Resources */,
 				9A4E0723217B8C2E002A73A3 /* global.js in Resources */,
