@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A0025E521F3296200212CE3 /* Smart Reminder Launch Helper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A0025DA21F319F900212CE3 /* Smart Reminder Launch Helper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A4E06EA217B195A002A73A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E06E9217B195A002A73A3 /* AppDelegate.swift */; };
 		9A4E06EC217B195A002A73A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E06EB217B195A002A73A3 /* ViewController.swift */; };
 		9A4E06EE217B195A002A73A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E06ED217B195A002A73A3 /* Assets.xcassets */; };
@@ -27,9 +28,25 @@
 		9AAE648E218CAB0900968FB9 /* loader.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAE6487218CAAE900968FB9 /* loader.svg */; };
 		9AAE648F218CAB0900968FB9 /* logo.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAE6488218CAAE900968FB9 /* logo.png */; };
 		9ABEDB5C21872F8300DFB1A9 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 9ABEDB5B21872F8300DFB1A9 /* script.js */; };
+		9AC99D1021EF4307005ED416 /* frontmost_window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC99D0F21EF4307005ED416 /* frontmost_window.swift */; };
+		9AC99D1221EF4C55005ED416 /* Req_TODO.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9AC99D1121EF4C55005ED416 /* Req_TODO.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9A0025D921F319F900212CE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A0025D421F319F900212CE3 /* Smart Reminder Launch Helper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5B3952ED1BAFF2B500966A2B;
+			remoteInfo = "Smart Reminder Launch Helper";
+		};
+		9A0025DB21F319F900212CE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A0025D421F319F900212CE3 /* Smart Reminder Launch Helper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5B3953001BAFF2B500966A2B;
+			remoteInfo = "Smart Reminder Launch HelperTests";
+		};
 		9A4E070F217B1969002A73A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A4E06DE217B195A002A73A3 /* Project object */;
@@ -40,6 +57,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		9A0025E421F3295800212CE3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				9A0025E521F3296200212CE3 /* Smart Reminder Launch Helper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A4E0715217B1969002A73A3 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -75,6 +102,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9A0025D421F319F900212CE3 /* Smart Reminder Launch Helper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Smart Reminder Launch Helper.xcodeproj"; path = "1ClickPdfContainer/LoginItemHelper/Smart Reminder Launch Helper/Smart Reminder Launch Helper.xcodeproj"; sourceTree = "<group>"; };
 		9A4E06E6217B195A002A73A3 /* 1ClickPdfContainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1ClickPdfContainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4E06E9217B195A002A73A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A4E06EB217B195A002A73A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +132,8 @@
 		9AAE6487218CAAE900968FB9 /* loader.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = loader.svg; sourceTree = "<group>"; };
 		9AAE6488218CAAE900968FB9 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		9ABEDB5B21872F8300DFB1A9 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		9AC99D0F21EF4307005ED416 /* frontmost_window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = frontmost_window.swift; sourceTree = "<group>"; };
+		9AC99D1121EF4C55005ED416 /* Req_TODO.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Req_TODO.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,9 +155,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A0025D521F319F900212CE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A0025DA21F319F900212CE3 /* Smart Reminder Launch Helper.app */,
+				9A0025DC21F319F900212CE3 /* Smart Reminder Launch HelperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9A4E06DD217B195A002A73A3 = {
 			isa = PBXGroup;
 			children = (
+				9A0025D421F319F900212CE3 /* Smart Reminder Launch Helper.xcodeproj */,
 				9A4E06E8217B195A002A73A3 /* 1ClickPdfContainer */,
 				9A4E0701217B1969002A73A3 /* 1ClickPdf */,
 				9A4E06FE217B1969002A73A3 /* Frameworks */,
@@ -149,10 +189,12 @@
 			children = (
 				9A4E06E9217B195A002A73A3 /* AppDelegate.swift */,
 				9A4E06EB217B195A002A73A3 /* ViewController.swift */,
+				9AC99D0F21EF4307005ED416 /* frontmost_window.swift */,
 				9A4E06ED217B195A002A73A3 /* Assets.xcassets */,
 				9A4E06EF217B195A002A73A3 /* Main.storyboard */,
 				9A4E06F2217B195A002A73A3 /* Info.plist */,
 				9A4E06F3217B195A002A73A3 /* _ClickPdfContainer.entitlements */,
+				9AC99D1121EF4C55005ED416 /* Req_TODO.rtf */,
 			);
 			path = 1ClickPdfContainer;
 			sourceTree = "<group>";
@@ -227,6 +269,7 @@
 				9A4E06E3217B195A002A73A3 /* Frameworks */,
 				9A4E06E4217B195A002A73A3 /* Resources */,
 				9A4E0715217B1969002A73A3 /* Embed App Extensions */,
+				9A0025E421F3295800212CE3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -286,6 +329,12 @@
 			mainGroup = 9A4E06DD217B195A002A73A3;
 			productRefGroup = 9A4E06E7217B195A002A73A3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9A0025D521F319F900212CE3 /* Products */;
+					ProjectRef = 9A0025D421F319F900212CE3 /* Smart Reminder Launch Helper.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9A4E06E5217B195A002A73A3 /* 1ClickPdfContainer */,
@@ -294,11 +343,29 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		9A0025DA21F319F900212CE3 /* Smart Reminder Launch Helper.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Smart Reminder Launch Helper.app";
+			remoteRef = 9A0025D921F319F900212CE3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A0025DC21F319F900212CE3 /* Smart Reminder Launch HelperTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Smart Reminder Launch HelperTests.xctest";
+			remoteRef = 9A0025DB21F319F900212CE3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		9A4E06E4217B195A002A73A3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AC99D1221EF4C55005ED416 /* Req_TODO.rtf in Resources */,
 				9A4E06EE217B195A002A73A3 /* Assets.xcassets in Resources */,
 				9A4E06F1217B195A002A73A3 /* Main.storyboard in Resources */,
 			);
@@ -327,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AC99D1021EF4307005ED416 /* frontmost_window.swift in Sources */,
 				9A4E06EC217B195A002A73A3 /* ViewController.swift in Sources */,
 				9A4E06EA217B195A002A73A3 /* AppDelegate.swift in Sources */,
 			);
@@ -492,10 +560,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = 1ClickPdfContainer/_ClickPdfContainer.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 462M73BZML;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = 1ClickPdfContainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -514,10 +582,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = 1ClickPdfContainer/_ClickPdfContainer.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 462M73BZML;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = 1ClickPdfContainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -534,9 +602,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = 1ClickPdf/_ClickPdf.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 462M73BZML;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = 1ClickPdf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -555,9 +623,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = 1ClickPdf/_ClickPdf.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 462M73BZML;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = 1ClickPdf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
