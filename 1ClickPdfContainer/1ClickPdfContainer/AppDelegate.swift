@@ -28,10 +28,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let comps = Bundle.main.bundlePath.components(separatedBy: "/")
         let parent = comps[comps.count - 2]
         print(parent)
-        if parent != "Applications" {
-            launchHelper()
-            exit(0)
-        }
+//        if parent != "Applications" {
+//            launchHelper()
+//            exit(0)
+//        }
     }
     
     func launchHelper() -> Void {

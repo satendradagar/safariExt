@@ -97,7 +97,7 @@ class ViewController: NSViewController {
     }
         
         func openSafariExtensionPreferences() {
-            SFSafariApplication.showPreferencesForExtension(withIdentifier: "com.COREBITS.-ClickPdfContainer.-ClickPdf") { (err) in
+            SFSafariApplication.showPreferencesForExtension(withIdentifier: "com.CoreBits.smartUnite.1ClickPdf") { (err) in
                 print(err ?? "Err")
             }
 
