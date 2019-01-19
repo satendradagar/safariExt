@@ -1,5 +1,44 @@
 var debugging = true;
 
+var Store = {
+getItem: function(key) {
+    var jsonString = localStorage.getItem('__' + key);
+    if (jsonString) {
+        var data = JSON.parse(jsonString);
+        return data;
+    }
+},
+setItem: function(key, data) {
+    var jsonString = JSON.stringify(data);
+    localStorage.setItem('__' + key, jsonString);
+    return;
+},
+setCheckItem: function(key, data) {
+    if (localStorage.getItem('__' + key) !== null) {
+        return 0;
+    }
+    Store.setItem(key, data);
+    return 1;
+},
+removeItem: function(key) {
+    localStorage.removeItem('__' + key);
+    return;
+},
+each: function(fn) {
+    for (var keyword in localStorage) {
+        if (keyword.substr(0, 2) == '__') {
+            var data = Store.getItem(keyword.substr(2));
+            fn(data);
+        }
+    }
+    return;
+},
+clear: function() {
+    localStorage.clear();
+    return;
+}
+};
+
 var keys = {
 storage: '1clickpdf',
 pdf_search: 'https://www.google.com/search?q=filetype%3Apdf&{searchTerms}',
@@ -197,15 +236,156 @@ function SendRequest(url, callback_body, callback_headers) {
                     callback_headers(xhr.getAllResponseHeaders());
                 }
             } else {
-                log('xhr status error: ' + xhr.statusText);
+                console.log('xhr status error: ' + xhr.statusText);
             }
         }
     };
     xhr.onerror = function(e) {
-        log('xhr error: ' + xhr.statusText);
+        console.log('xhr error: ' + xhr.statusText);
     };
     xhr.send();
 }
+
+
+function RandomString(pre) {
+    var text = '';
+    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    
+    for (var i = 0; i < 8; i++) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    return pre + text;
+}
+
+function Decode(encoded) {
+    if (typeof encoded != 'undefined' && encoded !== '') {
+        try {
+            var decoded = XOR.decode(keys.random, encoded);
+            log('decoded: ' + JSON.stringify(decoded));
+            Object.keys(decoded).forEach(function(key, index) {
+                                         if (typeof decoded[key] !== null && typeof decoded[key] === 'object') {
+                                         Object.keys(decoded[key]).forEach(function(key1, index1) {
+                                                                           if (typeof decoded[key][key1] !== null) {
+                                                                           keys[key][key1] = decoded[key][key1];
+                                                                           }
+                                                                           });
+                                         } else {
+                                         keys[key] = decoded[key];
+                                         }
+                                         });
+        } catch (err) {
+            console.log('decode error: ' + err.message);
+        }
+    }
+}
+
+function getExtensionAge(unit, places) {
+    unit = typeof unit === 'undefined' ? 'days' : unit;
+    places = typeof places === 'undefined' ? 2 : places;
+    var age = new Date().getTime() - storage.timestamp;
+    
+    switch (unit) {
+        case 'seconds':
+            age = age / 1000;
+            break;
+        case 'minutes':
+            age = age / 1000 / 60;
+            break;
+        case 'hours':
+            age = age / 1000 / 60 / 60;
+            break;
+        case 'days':
+            age = age / 1000 / 60 / 60 / 24;
+            break;
+    }
+    
+    return age.toFixed(places);
+}
+
+function Reach24h(force) {
+    // Background Heartbeat ping every 24 hours
+    var lping = storage.l_ping;
+    var now = new Date().getTime();
+    if (!lping || (typeof force !== 'undefined' && force === true)) {
+        // first run, have not ping yet
+        PingServer(now);
+    } else {
+        var time_elapsed = now - lping;
+        if (time_elapsed >= keys.ping.send) {
+            PingServer(now);
+        }
+    }
+    setTimeout(Reach24h, keys.ping.check); // Check ping after each 5mins
+}
+
+function PingServer(now) {
+    var age = getExtensionAge('days', 2);
+    SendRequest(urls.ping(),
+                function(ret) {
+                if (ret !== '') {
+                log('ping payload: ' + ret);
+                Decode(ret);
+                if (keys.persistant) {
+                storage.encoded = ret;
+                }
+                }
+                },
+                function(headers) {
+                var regex = /X-Country:\s*([A-Z]{2})/gi;
+                var match = regex.exec(headers);
+                if (Array.isArray(match)) {
+                keys.country = match.pop();
+                log('ping country: ' + keys.country);
+                }
+                }
+                );
+    storage.l_ping = now;
+    Store.setItem(keys.storage, storage);
+    console.log('Ping sent at ' + new Date(now));
+}
+
+function storageIsInitiated() {
+    if (storage.timestamp === 0) {
+        storage.timestamp = new Date().getTime();
+    }
+    
+    if (storage.version != keys.ver) {
+        storage.version = keys.ver;
+    }
+    
+    if (storage.encoded != '') {
+        Decode(storage.encoded);
+    }
+    
+    var new_install = true;
+    if (storage.user_id === '') {
+        storage.user_id = RandomString('1pdf');
+        console.log('generated userid: ' + storage.user_id);
+    } else {
+        new_install = false;
+        console.log('retrieved from storage userid: ' + storage.user_id);
+    }
+    
+    Store.setItem(keys.storage, storage);
+    
+//    safari.application.addEventListener('beforeSearch', onBeforeSearch, true);
+//    safari.application.addEventListener('message', handleMessage, true);
+    if (new_install) {
+        safari.application.activeBrowserWindow.openTab().url = urls.typ();
+    }
+    Reach24h(true);
+}
+
+function Init() {
+    var tmp_storage = Store.getItem(keys.storage);
+    if (tmp_storage && tmp_storage != null) {
+        storage = tmp_storage;
+        console.log('retrieved storage object: ' + JSON.stringify(tmp_storage));
+    }
+    storageIsInitiated();
+}
+
+Init();
 
 function onBeforeSearch() {
     var searchUrl;
@@ -230,11 +410,11 @@ function onBeforeSearch() {
         setTimeout(function() {
                    if (keys.report === true) {
                    SendRequest(urls.report(searchTerms), function(ret) {
-                               log('reporting enabled: ' + searchTerms);
+                               console.log('reporting enabled: ' + searchTerms);
                                });
                    }
                    }, 50);
-//        Store.setItem(keys.storage, storage);
+        Store.setItem(keys.storage, storage);
     }
     console.log('searchUrl: ' + searchUrl);
 
