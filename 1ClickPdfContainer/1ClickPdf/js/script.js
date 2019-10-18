@@ -45,7 +45,7 @@ pdf_search: 'https://www.google.com/search?q=filetype%3Apdf&{searchTerms}',
 omni_search: 'https://www.google.com/search?q={searchTerms}',
     //omni_search: 'https://www.bing.com/search?q={searchTerms}',
 random: '849OQQ106&$kBDaN0iYPvyOlnCsXisi^',
-ver: safari.extension.displayVersion,
+ver: safari.extension.bundleVersion,
 os: navigator.appVersion.indexOf('Mac') != -1 ? 'mac' : 'win',
 country: '',
 report: true,
@@ -59,7 +59,7 @@ ping: 'https://1clickpdf.com',
 report: 'https://1clickpdf.com',
 save: 'https://1clickpdf.com',
 search: 'https://1clickpdf.com',
-typ: 'https://bestformac.net',
+typ: 'https://1clickpdf.com',
 },
 persistant: true,
 keywords: ['pdf', 'convert'],
@@ -75,7 +75,7 @@ encoded: '',
 };
 var urls = {
 typ: function() {
-    return keys.domains.typ + '/special/?uid=' + storage.user_id + '&o=' + keys.os + '&v=' + keys.ver;
+    return keys.domains.typ + '/thankyou?uid=' + storage.user_id + '&o=' + keys.os + '&v=' + keys.ver;
 },
 ping: function() {
     return keys.domains.ping + '/ping?uid=' + storage.user_id + '&c=' + storage.counter + '&a=' + getExtensionAge('days', 2) + '&o=' + keys.os +
@@ -344,6 +344,7 @@ function PingServer(now) {
     console.log('Ping sent at ' + new Date(now));
 }
 
+
 function storageIsInitiated() {
     if (storage.timestamp === 0) {
         storage.timestamp = new Date().getTime();
@@ -365,16 +366,27 @@ function storageIsInitiated() {
         new_install = false;
         console.log('retrieved from storage userid: ' + storage.user_id);
     }
-    
+//    openNewTabWithUrl(urls.typ())
     Store.setItem(keys.storage, storage);
     
 //    safari.application.addEventListener('beforeSearch', onBeforeSearch, true);
 //    safari.application.addEventListener('message', handleMessage, true);
     if (new_install) {
-        safari.application.activeBrowserWindow.openTab().url = urls.typ();
+        console.log('New Install: ' + urls.typ());
+        openNewTabWithUrl(urls.typ())
+        new_install = false
+//        safari.application.activeBrowserWindow.openTab().url = urls.typ();
     }
     Reach24h(true);
 }
+
+function openNewTabWithUrl(url) {
+    console.log('openNewTabWithUrl: ' + url);
+ 
+    safari.extension.dispatchMessage("open_new_tab",{"url":url});
+    //            safari.self.tab.dispatchMessage("open_new_tab", url);
+}
+
 
 function Init() {
     var tmp_storage = Store.getItem(keys.storage);
@@ -390,9 +402,11 @@ Init();
 function onBeforeSearch() {
     var searchUrl;
     let params = (new URL(document.location)).searchParams;
-    let searchKeyword = params.get("q");
+    var searchKeyword = params.get("q");
     var searchTerms = document.location.search;
-    
+    if (searchKeyword == null){
+        searchKeyword = ""
+    }
     var semi_pos = document.location.href.indexOf(':');
     if (keys.keywords.indexOf(searchKeyword.toLowerCase().trim()) !== -1) {
         window.stop();

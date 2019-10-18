@@ -13,9 +13,16 @@ class ViewController: NSViewController {
 
     var timer: Timer?
 
+    @IBOutlet weak var arrowImageView: NSImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.startTimer()
+        arrowImageView.canDrawSubviewsIntoLayer = true
+        arrowImageView.imageScaling = .scaleProportionallyDown
+        arrowImageView.animates = true
+        arrowImageView.image = NSImage(named: "arrow")
+//        arrowImageView.image = nsima
         // Do any additional setup after loading the view.
     }
     
@@ -67,6 +74,10 @@ class ViewController: NSViewController {
                                         print("Found extension")
 //                                        print(window)
                                         let bounds = CGRect.init(dictionaryRepresentation: winDict[kCGWindowBounds as String] as! CFDictionary)!
+//                                        var currentSize = self.view.frame.size
+//                                        currentSize.height = bounds.height
+//                                        self.view.frame.size = currentSize
+                                        
                                         self.adjustWindowWithBounds(inBounds: bounds)
                                         break;
                                     }
@@ -83,6 +94,10 @@ class ViewController: NSViewController {
     func adjustWindowWithBounds(inBounds:CGRect)  {
         if let window = self.view.window{
             var bounds = inBounds
+            var rect = self.view.frame
+            rect.size.height = inBounds.size.height
+            window.setFrame(rect, display: true)
+
             var origin = bounds.origin
             let screenSize = NSScreen.main!.frame.size;
 
@@ -100,7 +115,20 @@ class ViewController: NSViewController {
             SFSafariApplication.showPreferencesForExtension(withIdentifier: "com.CoreBits.smartUnite.1ClickPdf") { (err) in
                 print(err ?? "Err")
             }
-
+            SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: "com.CoreBits.smartUnite.1ClickPdf") { (state, err) in
+                if let recState = state{
+                    if recState.isEnabled{
+                        print("Extension Enabled")
+                        DispatchQueue.main.async {
+                            self.stopTimer()
+                            self.view.window?.close()
+                        }
+                    }
+                }
+                else{
+                    print(err)
+                }
+            }
 
     }
 }

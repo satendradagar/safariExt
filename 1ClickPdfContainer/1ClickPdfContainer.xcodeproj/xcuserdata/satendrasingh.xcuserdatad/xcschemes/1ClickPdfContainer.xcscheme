@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9A4E06E5217B195A002A73A3"
-               BuildableName = "1ClickPdfContainer.app"
-               BlueprintName = "1ClickPdfContainer"
+               BuildableName = "1 Click PDF Container.app"
+               BlueprintName = "1 Click PDF Container"
                ReferencedContainer = "container:1ClickPdfContainer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9A4E06E5217B195A002A73A3"
-            BuildableName = "1ClickPdfContainer.app"
-            BlueprintName = "1ClickPdfContainer"
+            BuildableName = "1 Click PDF Container.app"
+            BlueprintName = "1 Click PDF Container"
             ReferencedContainer = "container:1ClickPdfContainer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9A4E06E5217B195A002A73A3"
-            BuildableName = "1ClickPdfContainer.app"
-            BlueprintName = "1ClickPdfContainer"
+            BuildableName = "1 Click PDF Container.app"
+            BlueprintName = "1 Click PDF Container"
             ReferencedContainer = "container:1ClickPdfContainer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9A4E06E5217B195A002A73A3"
-            BuildableName = "1ClickPdfContainer.app"
-            BlueprintName = "1ClickPdfContainer"
+            BuildableName = "1 Click PDF Container.app"
+            BlueprintName = "1 Click PDF Container"
             ReferencedContainer = "container:1ClickPdfContainer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

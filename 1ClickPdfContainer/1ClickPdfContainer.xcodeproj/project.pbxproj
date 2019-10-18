@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A0025E521F3296200212CE3 /* Smart Reminder Launch Helper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A0025DA21F319F900212CE3 /* Smart Reminder Launch Helper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9A31BF1B2226E7A100B79A18 /* arrow.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9A31BF182226E7A100B79A18 /* arrow.gif */; };
 		9A4E06EA217B195A002A73A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E06E9217B195A002A73A3 /* AppDelegate.swift */; };
 		9A4E06EC217B195A002A73A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E06EB217B195A002A73A3 /* ViewController.swift */; };
 		9A4E06EE217B195A002A73A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E06ED217B195A002A73A3 /* Assets.xcassets */; };
@@ -17,18 +17,19 @@
 		9A4E0705217B1969002A73A3 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E0704217B1969002A73A3 /* SafariExtensionViewController.swift */; };
 		9A4E0708217B1969002A73A3 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E0706217B1969002A73A3 /* SafariExtensionViewController.xib */; };
 		9A4E070D217B1969002A73A3 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E070C217B1969002A73A3 /* ToolbarItemIcon.pdf */; };
-		9A4E0711217B1969002A73A3 /* 1ClickPdf.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A4E06FD217B1969002A73A3 /* 1ClickPdf.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A4E0720217B8C2E002A73A3 /* convert.html in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E0718217B8C2D002A73A3 /* convert.html */; };
 		9A4E0721217B8C2E002A73A3 /* global.html in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E0719217B8C2D002A73A3 /* global.html */; };
 		9A4E0723217B8C2E002A73A3 /* global.js in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E071C217B8C2E002A73A3 /* global.js */; };
 		9A4E0724217B8C2E002A73A3 /* injected.js in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E071D217B8C2E002A73A3 /* injected.js */; };
 		9A4E0725217B8C2E002A73A3 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E071E217B8C2E002A73A3 /* Settings.plist */; };
+		9A67F2D422263537004361EE /* SSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A67F2D122263537004361EE /* SSView.swift */; };
 		9AA110CE218CA4D0000C9175 /* balloon.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A4E0717217B8C2D002A73A3 /* balloon.css */; };
 		9AAE648E218CAB0900968FB9 /* loader.svg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAE6487218CAAE900968FB9 /* loader.svg */; };
 		9AAE648F218CAB0900968FB9 /* logo.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9AAE6488218CAAE900968FB9 /* logo.png */; };
 		9ABEDB5C21872F8300DFB1A9 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 9ABEDB5B21872F8300DFB1A9 /* script.js */; };
 		9AC99D1021EF4307005ED416 /* frontmost_window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC99D0F21EF4307005ED416 /* frontmost_window.swift */; };
 		9AC99D1221EF4C55005ED416 /* Req_TODO.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9AC99D1121EF4C55005ED416 /* Req_TODO.rtf */; };
+		9AF7932622319199009ACFFA /* 1 Click PDF.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A4E06FD217B1969002A73A3 /* 1 Click PDF.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,33 +47,23 @@
 			remoteGlobalIDString = 5B3953001BAFF2B500966A2B;
 			remoteInfo = "Smart Reminder Launch HelperTests";
 		};
-		9A4E070F217B1969002A73A3 /* PBXContainerItemProxy */ = {
+		9AF793242231918C009ACFFA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A4E06DE217B195A002A73A3 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9A4E06FC217B1969002A73A3;
-			remoteInfo = 1ClickPdf;
+			remoteInfo = "1 Click PDF";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9A0025E421F3295800212CE3 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = Contents/Library/LoginItems;
-			dstSubfolderSpec = 1;
-			files = (
-				9A0025E521F3296200212CE3 /* Smart Reminder Launch Helper.app in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9A4E0715217B1969002A73A3 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				9A4E0711217B1969002A73A3 /* 1ClickPdf.appex in Embed App Extensions */,
+				9AF7932622319199009ACFFA /* 1 Click PDF.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,14 +93,15 @@
 
 /* Begin PBXFileReference section */
 		9A0025D421F319F900212CE3 /* Smart Reminder Launch Helper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Smart Reminder Launch Helper.xcodeproj"; path = "1ClickPdfContainer/LoginItemHelper/Smart Reminder Launch Helper/Smart Reminder Launch Helper.xcodeproj"; sourceTree = "<group>"; };
-		9A4E06E6217B195A002A73A3 /* 1ClickPdfContainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1ClickPdfContainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A31BF182226E7A100B79A18 /* arrow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = arrow.gif; path = ../../../../../Downloads/arrow.gif; sourceTree = "<group>"; };
+		9A4E06E6217B195A002A73A3 /* 1 Click PDF Container.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1 Click PDF Container.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4E06E9217B195A002A73A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A4E06EB217B195A002A73A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9A4E06ED217B195A002A73A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A4E06F0217B195A002A73A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A4E06F2217B195A002A73A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A4E06F3217B195A002A73A3 /* _ClickPdfContainer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = _ClickPdfContainer.entitlements; sourceTree = "<group>"; };
-		9A4E06FD217B1969002A73A3 /* 1ClickPdf.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = 1ClickPdf.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4E06FD217B1969002A73A3 /* 1 Click PDF.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "1 Click PDF.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4E06FF217B1969002A73A3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9A4E0702217B1969002A73A3 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
 		9A4E0704217B1969002A73A3 /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +117,10 @@
 		9A4E071C217B8C2E002A73A3 /* global.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = global.js; sourceTree = "<group>"; };
 		9A4E071D217B8C2E002A73A3 /* injected.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = injected.js; sourceTree = "<group>"; };
 		9A4E071E217B8C2E002A73A3 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		9A67F2D122263537004361EE /* SSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSView.swift; sourceTree = "<group>"; };
+		9A9C616921F4301F0073070D /* 1ClickPdfContainer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 1ClickPdfContainer.entitlements; sourceTree = "<group>"; };
+		9A9C616A21F430270073070D /* 1ClickPdf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 1ClickPdf.entitlements; sourceTree = "<group>"; };
+		9AA1EE112261F6EC0045A1AE /* 1 Click PDF Container.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "1 Click PDF Container.entitlements"; sourceTree = "<group>"; };
 		9AAE6483218CAAE900968FB9 /* Icon-96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-96.png"; sourceTree = "<group>"; };
 		9AAE6484218CAAE900968FB9 /* Icon-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-128.png"; sourceTree = "<group>"; };
 		9AAE6485218CAAE900968FB9 /* Icon-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-64.png"; sourceTree = "<group>"; };
@@ -166,6 +162,7 @@
 		9A4E06DD217B195A002A73A3 = {
 			isa = PBXGroup;
 			children = (
+				9AA1EE112261F6EC0045A1AE /* 1 Click PDF Container.entitlements */,
 				9A0025D421F319F900212CE3 /* Smart Reminder Launch Helper.xcodeproj */,
 				9A4E06E8217B195A002A73A3 /* 1ClickPdfContainer */,
 				9A4E0701217B1969002A73A3 /* 1ClickPdf */,
@@ -177,8 +174,8 @@
 		9A4E06E7217B195A002A73A3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A4E06E6217B195A002A73A3 /* 1ClickPdfContainer.app */,
-				9A4E06FD217B1969002A73A3 /* 1ClickPdf.appex */,
+				9A4E06E6217B195A002A73A3 /* 1 Click PDF Container.app */,
+				9A4E06FD217B1969002A73A3 /* 1 Click PDF.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,10 +183,13 @@
 		9A4E06E8217B195A002A73A3 /* 1ClickPdfContainer */ = {
 			isa = PBXGroup;
 			children = (
+				9A67F2D122263537004361EE /* SSView.swift */,
+				9A9C616921F4301F0073070D /* 1ClickPdfContainer.entitlements */,
 				9A4E06E9217B195A002A73A3 /* AppDelegate.swift */,
 				9A4E06EB217B195A002A73A3 /* ViewController.swift */,
 				9AC99D0F21EF4307005ED416 /* frontmost_window.swift */,
 				9A4E06ED217B195A002A73A3 /* Assets.xcassets */,
+				9A31BF182226E7A100B79A18 /* arrow.gif */,
 				9A4E06EF217B195A002A73A3 /* Main.storyboard */,
 				9A4E06F2217B195A002A73A3 /* Info.plist */,
 				9A4E06F3217B195A002A73A3 /* _ClickPdfContainer.entitlements */,
@@ -209,6 +209,7 @@
 		9A4E0701217B1969002A73A3 /* 1ClickPdf */ = {
 			isa = PBXGroup;
 			children = (
+				9A9C616A21F430270073070D /* 1ClickPdf.entitlements */,
 				9A4E0702217B1969002A73A3 /* SafariExtensionHandler.swift */,
 				9A4E0704217B1969002A73A3 /* SafariExtensionViewController.swift */,
 				9A4E0706217B1969002A73A3 /* SafariExtensionViewController.xib */,
@@ -260,29 +261,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9A4E06E5217B195A002A73A3 /* 1ClickPdfContainer */ = {
+		9A4E06E5217B195A002A73A3 /* 1 Click PDF Container */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9A4E06F6217B195A002A73A3 /* Build configuration list for PBXNativeTarget "1ClickPdfContainer" */;
+			buildConfigurationList = 9A4E06F6217B195A002A73A3 /* Build configuration list for PBXNativeTarget "1 Click PDF Container" */;
 			buildPhases = (
 				9A4E06E2217B195A002A73A3 /* Sources */,
 				9A4E06E3217B195A002A73A3 /* Frameworks */,
 				9A4E06E4217B195A002A73A3 /* Resources */,
 				9A4E0715217B1969002A73A3 /* Embed App Extensions */,
-				9A0025E421F3295800212CE3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9A4E0710217B1969002A73A3 /* PBXTargetDependency */,
+				9AF793252231918C009ACFFA /* PBXTargetDependency */,
 			);
-			name = 1ClickPdfContainer;
+			name = "1 Click PDF Container";
 			productName = 1ClickPdfContainer;
-			productReference = 9A4E06E6217B195A002A73A3 /* 1ClickPdfContainer.app */;
+			productReference = 9A4E06E6217B195A002A73A3 /* 1 Click PDF Container.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9A4E06FC217B1969002A73A3 /* 1ClickPdf */ = {
+		9A4E06FC217B1969002A73A3 /* 1 Click PDF */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9A4E0712217B1969002A73A3 /* Build configuration list for PBXNativeTarget "1ClickPdf" */;
+			buildConfigurationList = 9A4E0712217B1969002A73A3 /* Build configuration list for PBXNativeTarget "1 Click PDF" */;
 			buildPhases = (
 				9A4E06F9217B1969002A73A3 /* Sources */,
 				9A4E06FA217B1969002A73A3 /* Frameworks */,
@@ -294,9 +294,9 @@
 			);
 			dependencies = (
 			);
-			name = 1ClickPdf;
+			name = "1 Click PDF";
 			productName = 1ClickPdf;
-			productReference = 9A4E06FD217B1969002A73A3 /* 1ClickPdf.appex */;
+			productReference = 9A4E06FD217B1969002A73A3 /* 1 Click PDF.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -313,7 +313,7 @@
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -321,7 +321,7 @@
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -346,8 +346,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				9A4E06E5217B195A002A73A3 /* 1ClickPdfContainer */,
-				9A4E06FC217B1969002A73A3 /* 1ClickPdf */,
+				9A4E06E5217B195A002A73A3 /* 1 Click PDF Container */,
+				9A4E06FC217B1969002A73A3 /* 1 Click PDF */,
 			);
 		};
 /* End PBXProject section */
@@ -375,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AC99D1221EF4C55005ED416 /* Req_TODO.rtf in Resources */,
+				9A31BF1B2226E7A100B79A18 /* arrow.gif in Resources */,
 				9A4E06EE217B195A002A73A3 /* Assets.xcassets in Resources */,
 				9A4E06F1217B195A002A73A3 /* Main.storyboard in Resources */,
 			);
@@ -402,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A67F2D422263537004361EE /* SSView.swift in Sources */,
 				9AC99D1021EF4307005ED416 /* frontmost_window.swift in Sources */,
 				9A4E06EC217B195A002A73A3 /* ViewController.swift in Sources */,
 				9A4E06EA217B195A002A73A3 /* AppDelegate.swift in Sources */,
@@ -420,10 +422,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9A4E0710217B1969002A73A3 /* PBXTargetDependency */ = {
+		9AF793252231918C009ACFFA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9A4E06FC217B1969002A73A3 /* 1ClickPdf */;
-			targetProxy = 9A4E070F217B1969002A73A3 /* PBXContainerItemProxy */;
+			target = 9A4E06FC217B1969002A73A3 /* 1 Click PDF */;
+			targetProxy = 9AF793242231918C009ACFFA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -567,8 +569,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer: Satendra Singh (88TQ854567)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = "1 Click PDF Container.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = X6FQ433AWK;
 				INFOPLIST_FILE = 1ClickPdfContainer/Info.plist;
@@ -576,9 +579,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoreBits.smartUnite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Smart Unite Dev";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -588,16 +592,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = 1ClickPdfContainer/_ClickPdfContainer.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = "1 Click PDF Container.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = X6FQ433AWK;
 				INFOPLIST_FILE = 1ClickPdfContainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoreBits.smartUnite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -608,7 +613,8 @@
 		9A4E0713217B1969002A73A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer: Satendra Singh (88TQ854567)";
+				CODE_SIGN_ENTITLEMENTS = 1ClickPdf/1ClickPdf.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = X6FQ433AWK;
 				INFOPLIST_FILE = 1ClickPdf/Info.plist;
@@ -617,6 +623,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoreBits.smartUnite.1ClickPdf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -628,6 +635,7 @@
 		9A4E0714217B1969002A73A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = 1ClickPdf/1ClickPdf.entitlements;
 				CODE_SIGN_IDENTITY = "Developer ID Application: CoreBits Software Solutions Private Limited (X6FQ433AWK)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
@@ -637,6 +645,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoreBits.smartUnite.1ClickPdf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -657,7 +666,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9A4E06F6217B195A002A73A3 /* Build configuration list for PBXNativeTarget "1ClickPdfContainer" */ = {
+		9A4E06F6217B195A002A73A3 /* Build configuration list for PBXNativeTarget "1 Click PDF Container" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9A4E06F7217B195A002A73A3 /* Debug */,
@@ -666,7 +675,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9A4E0712217B1969002A73A3 /* Build configuration list for PBXNativeTarget "1ClickPdf" */ = {
+		9A4E0712217B1969002A73A3 /* Build configuration list for PBXNativeTarget "1 Click PDF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9A4E0713217B1969002A73A3 /* Debug */,

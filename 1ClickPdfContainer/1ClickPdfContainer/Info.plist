@@ -37,8 +37,6 @@
 	</dict>
 	<key>Description</key>
 	<string>Convert almost any format to PDF</string>
-	<key>LSBackgroundOnly</key>
-	<true/>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSHumanReadableCopyright</key>

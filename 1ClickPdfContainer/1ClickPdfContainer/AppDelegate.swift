@@ -38,5 +38,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       let helperPath =   "\(Bundle.main.bundlePath)/Contents/Library/LoginItems/Smart Reminder Launch Helper.app"
         NSWorkspace.shared.open(URL(fileURLWithPath: helperPath))
     }
+    
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
+    }
 }
 
